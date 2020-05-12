@@ -1,6 +1,6 @@
 # EWISER
 ## Code coming soon!
-This repo will host the code for our ACL 2020 paper, *Breaking Through the 80\% Glass Ceiling: {R}aising the State of the Art in Word Sense Disambiguation by Incorporating Knowledge Graph Information*, by Michele Bevilacqua and Roberto Navigli. Stay tuned!
+This repo will host the code for our ACL 2020 paper, *Breaking Through the 80% Glass Ceiling: Raising the State of the Art in Word Sense Disambiguation by Incorporating Knowledge Graph Information*, by Michele Bevilacqua and Roberto Navigli. Stay tuned!
 
 ## Reference
 ```
