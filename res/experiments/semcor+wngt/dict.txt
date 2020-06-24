@@ -1,0 +1,1 @@
+../../dictionaries/dict.txt

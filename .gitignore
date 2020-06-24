@@ -1,0 +1,12 @@
+.ipynb_checkpoints/*
+res/.ipynb_checkpoints/*
+notebook/.ipynb_checkpoints/*
+notebooks/*
+corpora/*
+.idea/*
+*.pyc
+__pycache__/
+*egg-info/
+*.swp
+*.pt
+
