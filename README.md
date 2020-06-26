@@ -34,7 +34,7 @@ pip install torch-scatter==latest+${CUDA} torch-sparse==latest+${CUDA} -f https:
 
 Clone this repo, install the other dependencies, and then `ewiser` as well.
 ```
-git clone ...
+git clone https://github.com/SapienzaNLP/ewiser.git
 cd ewiser
 pip install -r requirements.txt
 pip install -e .
