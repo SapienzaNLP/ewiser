@@ -56,7 +56,7 @@ Datasets:
 * [Multilingual Evaluation Datasets](https://github.com/SapienzaNLP/mwsd-datasets): the repo contains the French, German, Italian and Spanish datasets from SemEval 2013 and 2015. 
 * The other datasets used are in `res/corpora/*/orig`.
 
-Pre-preprocessed [SensEmBERT](http://sensembert.org/) + [LMMS](https://github.com/danlou/LMMS) embeddings (needed to train you own EWISER model):
+Pre-preprocessed [SensEmBERT](http://sensembert.org/) + [LMMS](https://github.com/danlou/LMMS) embeddings (needed to train your own EWISER model):
 * [Embeddings](https://drive.google.com/file/d/11v4FUMyHdpFBrkRJt8cGyy6xkM9a_Emp/view?usp=sharing)
 
 ## Evaluate
