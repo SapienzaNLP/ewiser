@@ -26,7 +26,7 @@ def read_graph(*paths, input_keys=None):
                     break
     assert input_keys is not None
 
-    remap = ResourceManager.get_bnids_to_offset_map()
+    remap = None
     g = nx.DiGraph()
 
     for path in paths:
@@ -46,6 +46,8 @@ def read_graph(*paths, input_keys=None):
                         w = None
 
                 if offset1.startswith('bn:'):
+                    if remap is None:
+                        remap = ResourceManager.get_bnids_to_offset_map()
                     offsets1 = remap.get(offset1)
                 elif offset1.startswith('wn:'):
                     offsets1 = [offset1]
@@ -53,6 +55,8 @@ def read_graph(*paths, input_keys=None):
                     raise NotImplementedError
 
                 if offset2.startswith('bn:'):
+                    if remap is None:
+                        remap = ResourceManager.get_bnids_to_offset_map()
                     offsets2 = remap.get(offset2)
                 elif offset2.startswith('wn:'):
                     offsets2 = [offset2]
