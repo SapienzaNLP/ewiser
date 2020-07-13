@@ -104,7 +104,7 @@ def main(args):
         T = 0
         gold_answers = defaultdict(set)
         gold_path = Path(corpus.replace('data.xml', 'gold.key.txt'))
-        bnids_map = ResourceManager.get_bnids_to_offset_map()
+        bnids_map = None
         for line in gold_path.read_text().splitlines():
             pieces = line.strip().split(' ')
             if not pieces:
@@ -113,6 +113,8 @@ def main(args):
             T += 1
             for g in gold:
                 if g.startswith('bn:'):
+                    if bnids_map is None:
+                        bnids_map = ResourceManager.get_bnids_to_offset_map()
                     o = bnids_map.get(g)
                     if o is None:
                         if args.on_error == 'keep':
