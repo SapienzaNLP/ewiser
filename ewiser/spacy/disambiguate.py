@@ -21,7 +21,6 @@ UD_WNPOS = {
     'ADJ': 'a',
     'ADV': 'r'
 }
-babelnet_map = ResourceManager.get_offset_to_bnids_map()
 
 def entropy_getter(token):
 
@@ -282,8 +281,6 @@ class Disambiguator(torch.nn.Module):
             else:
                 return None
 
-        def bnid_getter(token):
-            return babelnet_map.get(token._.offset)
 
         from spacy.tokens import Doc, Token
         Doc.set_extension('lang', default='en')
@@ -296,7 +293,6 @@ class Disambiguator(torch.nn.Module):
 
         Token.set_extension('offset', default=None)
         Token.set_extension('synset', getter=synset_getter)
-        Token.set_extension('bnid', getter=bnid_getter)
         Token.set_extension('disambiguator_internals', default=None)
 
     def _load_model(self, checkpoint, task):
