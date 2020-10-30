@@ -111,7 +111,7 @@ The adjacency matrix A in EWISER is stored as an edgelist. Each line is an edge,
 ## License
 This project is released under the CC-BY-NC 4.0 license (see `LICENSE.txt`). If you use EWISER, please put a link to this repo.
 
-## Acknowledgement
+## Acknowledgements
 The authors gratefully acknowledge the support of the ERC Consolidator Grant MOUSSE No. 726487 under the European
 Union's Horizon 2020 research and innovation programme.
 
