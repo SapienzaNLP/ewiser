@@ -1,7 +1,8 @@
 # EWISER (Enhanced WSD Integrating Synset Embeddings and Relations)
 This repo hosts the code necessary to reproduce the results of our ACL 2020 paper, *Breaking Through the 80% Glass Ceiling: Raising the State of the Art in Word Sense Disambiguation by Incorporating Knowledge Graph Information*, by Michele Bevilacqua and Roberto Navigli, which you can read on [ACL Anthology](https://www.aclweb.org/anthology/2020.acl-main.255/).
 
-**NEWS**: The released code now allows multilingual training and inference! Check the [Multilinguality](#Multilinguality) section below.
+## TODO:
+I'm working on more streamlined ways of enabling multilingual training and inference. Stay tuned! (or simply contact us at bevilacqua@di.uniroma1.it)
 
 You will also find a simple [spacy](https://spacy.io/) plugin that makes it easy to use EWISER in your own project!
 
