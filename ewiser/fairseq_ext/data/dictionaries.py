@@ -301,7 +301,7 @@ class ResourceManager:
                         lemma_pos_to_possible_offsets.append([lemma_pos_dictionary.index(lemma_pos)])
                     else:
                         lemma, pos = lemma_pos[:-2], lemma_pos[-1]
-                        senses = [offsets_dictionary.index(make_offset(s)) for s in wordnet.synsets(lemma, pos)]
+                        senses = [offsets_dictionary.index(make_offset(s.synset())) for s in wordnet.lemmas(lemma, pos)]
                         lemma_pos_to_possible_offsets.append(senses)
                         if lemma_pos not in lemma_pos_dictionary.indices:
                             raise KeyError(f'Lemma pos {lemma_pos} from the lemma pos to possible offsets dictionary'

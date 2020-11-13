@@ -1,7 +1,7 @@
 # EWISER (Enhanced WSD Integrating Synset Embeddings and Relations)
 This repo hosts the code necessary to reproduce the results of our ACL 2020 paper, *Breaking Through the 80% Glass Ceiling: Raising the State of the Art in Word Sense Disambiguation by Incorporating Knowledge Graph Information*, by Michele Bevilacqua and Roberto Navigli, which you can read on [ACL Anthology](https://www.aclweb.org/anthology/2020.acl-main.255/).
 
-**TODO**: I'm working on more streamlined ways of enabling multilingual training and inference. Stay tuned! (or simply contact us at bevilacqua@di.uniroma1.it)
+**NEWS**: The released code now allows multilingual training and inference! Check the [Multilinguality](#Multilinguality) section below.
 
 You will also find a simple [spacy](https://spacy.io/) plugin that makes it easy to use EWISER in your own project!
 
@@ -60,6 +60,11 @@ Datasets:
 
 Pre-preprocessed [SensEmBERT](http://sensembert.org/) + [LMMS](https://github.com/danlou/LMMS) embeddings (needed to train your own EWISER model):
 * [Embeddings](https://drive.google.com/file/d/11v4FUMyHdpFBrkRJt8cGyy6xkM9a_Emp/view?usp=sharing)
+
+## Multilinguality
+EWISER supports all the languages for which you are able to create a mapping starting from BabelNet indices `4.0.1`. 
+Please download the multilingual mapper from [Google Drive](https://drive.google.com/file/d/1vkHLGGRbEXkmOd5QLTodDmUegipDcJyP/view?usp=sharing) and find the instructions contained there.
+The mapping is limited to the Princeton WordNet subgraph (so you need to use the `wn` split if you plan to evaluate on [`mwsd-datasets`](https://github.com/SapienzaNLP/mwsd-datasets)).
 
 ## Evaluate
 Evaluation is run using `bin/eval_wsd.py`: 
