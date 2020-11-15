@@ -63,9 +63,15 @@ Pre-preprocessed [SensEmBERT](http://sensembert.org/) + [LMMS](https://github.co
 * [Embeddings](https://drive.google.com/file/d/11v4FUMyHdpFBrkRJt8cGyy6xkM9a_Emp/view?usp=sharing)
 
 ## Multilinguality
-EWISER supports all the languages for which you are able to create a mapping starting from BabelNet indices `4.0.1`. 
-Please download the multilingual mapper from [Google Drive](https://drive.google.com/file/d/1vkHLGGRbEXkmOd5QLTodDmUegipDcJyP/view?usp=sharing) and find the instructions contained there.
+EWISER supports all the languages for which you are able to create a mapping starting from BabelNet indices `4.0.1`.
+### French/German/Italian/Spanish
+1. Download [the BabelNet indices](https://babelnet.org/guide#HowcanIdownloadtheBabelNetindices?);
+2. `cd multilinguality`;
+3. Set your BabelNet indices path in `multilinguality/config/babelnet.var.properties`;
+4. `bash enable.sh`.
 The mapping is limited to the Princeton WordNet subgraph (so you need to use the `wn` split if you plan to evaluate on [`mwsd-datasets`](https://github.com/SapienzaNLP/mwsd-datasets)).
+### Other languages
+Please download the multilingual mapper from [Google Drive](https://drive.google.com/file/d/1vkHLGGRbEXkmOd5QLTodDmUegipDcJyP/view?usp=sharing) and find the instructions contained there.
 
 ## Evaluate
 Evaluation is run using `bin/eval_wsd.py`: 
