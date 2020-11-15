@@ -48,11 +48,13 @@ if __name__ == '__main__':
     parser.add_argument(
         '-d', '--device', default='cpu',
         help='Device to use. (cpu, cuda, cuda:0 etc.)')
+    parser.add_argument(
+        '-l', '--language', default='en')
     args = parser.parse_args()
 
     wsd = Disambiguator(args.checkpoint, batch_size=5, save_wsd_details=False).eval()
     wsd = wsd.to(args.device)
-    nlp = load('en', disable=['ner', 'parser'])
+    nlp = load(args.language.lower(), disable=['ner', 'parser'])
     nlp.add_pipe(wsd)
 
     if args.input == '-':
