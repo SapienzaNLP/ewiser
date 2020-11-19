@@ -52,7 +52,7 @@ if __name__ == '__main__':
         '-l', '--language', default='en')
     args = parser.parse_args()
 
-    wsd = Disambiguator(args.checkpoint, batch_size=5, save_wsd_details=False).eval()
+    wsd = Disambiguator(args.checkpoint, lang=args.language, batch_size=5, save_wsd_details=False).eval()
     wsd = wsd.to(args.device)
     nlp = load(args.language.lower(), disable=['ner', 'parser'])
     nlp.add_pipe(wsd)
