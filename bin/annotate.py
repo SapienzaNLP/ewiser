@@ -50,12 +50,14 @@ if __name__ == '__main__':
         help='Device to use. (cpu, cuda, cuda:0 etc.)')
     parser.add_argument(
         '-l', '--language', default='en')
+    parser.add_argument(
+        '-s', '--spacy', default='en_core_web_sm')
     args = parser.parse_args()
 
     wsd = Disambiguator(args.checkpoint, lang=args.language, batch_size=5, save_wsd_details=False).eval()
     wsd = wsd.to(args.device)
-    nlp = load(args.language.lower(), disable=['ner', 'parser'])
-    nlp.add_pipe(wsd)
+    nlp = load(args.spacy, disable=['ner', 'parser'])
+    wsd.enable(nlp, 'wsd')
 
     if args.input == '-':
         lines = fileinput.input(['-'])

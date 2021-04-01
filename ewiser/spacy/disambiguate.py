@@ -137,7 +137,6 @@ class Disambiguator(torch.nn.Module):
         return doc
 
     def pipe(self, docs, batch_size=5):
-
         tokens_indices = []
         tokens_str = []
         tokens_spacy = []
@@ -309,6 +308,19 @@ class Disambiguator(torch.nn.Module):
     def device(self):
         return next(self.parameters()).device
 
+    def enable(self, nlp, name):
+        import spacy
+        version = int(spacy.__version__.split('.')[0])
+        if version < 3:
+            nlp.add_pipe(self, last=True)
+        else:
+            from spacy.language import Language
+            @Language.factory(name)
+            def wsd(nlp, name):
+                return self
+            nlp.add_pipe(name, last=True)
+
+
 if __name__ == '__main__':
 
     from argparse import ArgumentParser
@@ -320,9 +332,9 @@ if __name__ == '__main__':
     parser.add_argument('--spacy', default='', type=str)
     args = parser.parse_args()
 
-    nlp = load(args.spacy or args.lang, disable=['parser', 'ner'])
     wsd = Disambiguator(args.checkpoint, lang=args.lang)
-    nlp.add_pipe(wsd, last=True)
+    nlp = load(args.spacy or args.lang, disable=['parser', 'ner'])
+    enable_wd(nlp, "wsd", wsd)
 
     print('Input a sentence then press Enter:')
     while True:
