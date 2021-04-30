@@ -65,7 +65,7 @@ Pre-preprocessed [SensEmBERT](http://sensembert.org/) + [LMMS](https://github.co
 ## Multilinguality
 EWISER supports all the languages for which you are able to create a mapping starting from BabelNet indices `4.0.1`.
 ### French/German/Italian/Spanish
-1. Download [the BabelNet indices](https://babelnet.org/guide#HowcanIdownloadtheBabelNetindices?);
+1. Download the [BabelNet indices](http://nlp.uniroma1.it/resources/) (ver. 4.0.1);
 2. `cd multilinguality`;
 3. Set your BabelNet indices path in `multilinguality/config/babelnet.var.properties`;
 4. `bash enable.sh`.
