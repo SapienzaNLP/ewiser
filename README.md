@@ -27,12 +27,10 @@ Check out the [Multilingual](#Multilingual) section below!
 ## Installation
 It is recommended to create a fresh `conda` env to use `ewiser` (e.g. `conda create -n ewiser python=3.7 pip; conda activate ewiser`).
 
-You'll also need [`pytorch`](https://pytorch.org/get-started/locally/) 1.5, and [`torch_sparse`](https://github.com/rusty1s/pytorch_sparse). Assuming you use CUDA 10.1:
+You'll also need [`pytorch`](https://pytorch.org/get-started/locally/) 1.6, and [`torch_sparse`](https://github.com/rusty1s/pytorch_sparse). Assuming you use CUDA 10.1:
 ```
-CUDA=cu101
-
-conda install pytorch=1.5.1 torchvision cudatoolkit=10.1 -c pytorch
-pip install torch-scatter==latest+${CUDA} torch-sparse==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+conda install pytorch=1.6.0 torchvision cudatoolkit=10.1 -c pytorch
+pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.6.0+cu101.html
 ```
 
 Clone this repo, install the other dependencies, and then `ewiser` as well.
