@@ -334,7 +334,7 @@ if __name__ == '__main__':
 
     wsd = Disambiguator(args.checkpoint, lang=args.lang)
     nlp = load(args.spacy or args.lang, disable=['parser', 'ner'])
-    enable_wd(nlp, "wsd", wsd)
+    wsd.enable(nlp, "wsd")
 
     print('Input a sentence then press Enter:')
     while True:
