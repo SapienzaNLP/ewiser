@@ -83,7 +83,7 @@ python bin/eval_wsd --checkpoints <your_checkpoint.pt> --xmls ${WSD_FRAMEWORK}/E
 ```
 
 ## Spacy plugin
-EWISER can be used as a `spacy` plugin. Please check `annotate.py` and `notebooks/inspect_wsd.py`.
+EWISER can be used as a `spacy` plugin. Please check `bin/annotate.py`.
 
 ## Train Your Model
 
