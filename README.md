@@ -121,7 +121,7 @@ The sense embeddings will have to be in Glove .txt format, without a header row,
 The adjacency matrix A in EWISER is stored as an edgelist. Each line is an edge, with three `\t`-separated values. Check `res/edges/` for examples.
 
 ## License
-This project is released under the CC-BY-NC 4.0 license (see `LICENSE.txt`). If you use EWISER, please put a link to this repo.
+This project is released under the CC-BY-NC-SA 4.0 license (see `LICENSE.txt`). If you use EWISER, please put a link to this repo.
 
 ## Acknowledgements
 The authors gratefully acknowledge the support of the <a href="http://mousse-project.org">ERC Consolidator Grant MOUSSE</a> No. 726487 under the European
